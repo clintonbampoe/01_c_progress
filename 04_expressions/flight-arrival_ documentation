@@ -1,0 +1,21 @@
+This problem cooked me so hard, I had to write documentation for it.
+
+This problem has cooked me in soo many ways.
+It is advisable to draw a number line containing all the departure times(in minutes) and the midpoints to better
+visualize this
+
+The logic of this program is to use the midpoints between every 2 adjacent departure times instead of the departure
+times themselves.
+
+E.g. The midpoint between 480 and 583 is 531.5. Hence, if t, the time entered(in minutes) is less than 531.5, then
+t is closer to 480.
+
+The next midpoint after 531.5 is 631 which is between 583 and 679
+
+If t moves to the if statement containing 631 then it means t is not less than 531.5, hence, we do not have to factor
+that into the statement.
+So if t is less than 631 then t is closer to 583 than 679.
+this is repeated for all the subsequent if statements and midpoints.
+
+
+
