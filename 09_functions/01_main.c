@@ -1,9 +1,13 @@
 #include <stdio.h>
 
-void print_pun(void) {
-    printf("To C or not to C, that is the question.\n");
-}
+int square(int n);
+
 int main(void) {
-    print_pun();
+    double x = 3.0;
+    printf("Square: %d\n", square(x));
     return 0;
+}
+
+int square(int n) {
+    return n * n;
 }
