@@ -1,11 +1,12 @@
 # C Mastery Roadmap – K.N. King Edition
 
-Progress tracker for *C Programming: A Modern Approach (2nd Edition)*.  
+`Progress Tracker`
+ ### C Programming: A Modern Approach (2nd Edition).  
 Chapters are marked as completed when core concepts are implemented (in exercises and projects) and reviewed.
 
 
 
-## Completed Chapters
+## `Completed Chapters`
 1. Introduction  
 2. C Fundamentals  
 3. Formatted Input/Output  
@@ -17,10 +18,10 @@ Chapters are marked as completed when core concepts are implemented (in exercise
 
 
 
-## Current Chapter
+## `Current Chapter`
 9. Functions  
 
 
 
-## Upcoming
+## `Upcoming`
 10. Program Organization
