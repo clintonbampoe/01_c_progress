@@ -35,5 +35,4 @@ int main() {
                 printf("Commands: 0=clear\t 1=credit\t 2=debit\t 3=balance\t 4=exit \n\n");
         }
     }
-    return 0;
 }
