@@ -101,5 +101,6 @@ add_executable(05_indirect_recursion "ch09_functions/05_indirect_recursion.c")
 add_executable(06_quick_sort "ch09_functions/06_quick_sort.c")
 add_executable(00_temp ch09_functions/00_temp.c)
 #exercises
-add_executable(ex01_day_num "ch09_functions/exercises/ex01_day_num.c")
-add_executable(ex02_num_digits "ch09_functions/exercises/ex02_num_digits.c")
+add_executable(ex04_day_num "ch09_functions/exercises/ex04_day_num.c")
+add_executable(ex05_num_digits "ch09_functions/exercises/ex05_num_digits.c")
+add_executable(ex06_digit_pos "ch09_functions/exercises/ex06_digit_pos.c")
