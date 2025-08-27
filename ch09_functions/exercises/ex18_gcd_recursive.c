@@ -15,10 +15,8 @@ int main(void) {
 
 // fn01 gcd
 int gcd(int m, int n) {
-    int temp = 0;
     if (n == 0) {
         return m;
     }
-    temp = m % n;
-    gcd(n , temp);
+    return gcd(n , m % n);
 }
