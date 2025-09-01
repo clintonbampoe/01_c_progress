@@ -15,9 +15,9 @@ Each chapter is implemented with rigor, and every insight, bug, and refactor is 
 - Prepare for systems-level engineering workflows
 
 ## 🛠 Tools & Environment
-- IDE: CLion, VS Code
-- Build System: CMake
-- Platform: WSL on Windows 11, Ubuntu Linux 24.04
+- IDE: CLion, Visual Studio IDE
+- Build System: CMake (for now)
+- Platform: WSL on Windows 11, Debian Linux
 - Git: granular commits, clean branches, tagged milestones
 
 ## 📌 Status
