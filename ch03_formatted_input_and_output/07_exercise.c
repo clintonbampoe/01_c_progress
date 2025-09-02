@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 int main(void) {
-    int one, two, three;
-    float four, five, six;
+    int one = 0, two = 0, three = 0;
+    float four = 0, five = 0, six = 0;
 
     printf("%d, %d, %d,", one, two, three);
 

@@ -5,9 +5,10 @@ int main(void) {
     // taking input for 12 hour time
     int hrs, mins, meridian;
     printf("Enter 12-hour time: ");
-    scanf("%d:%.2d %d", &hrs, &mins, &meridian);
+    int sf_return_value = scanf("%d:%.2d %d", &hrs, &mins, &meridian);
 
-
+    // T: time after midnight (minutes)
+    int t = (12 * hrs) + mins;
 
     printf("Closest departure time is ");
     if (t < 531.5) {
