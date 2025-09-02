@@ -112,3 +112,5 @@ ADD_EXECUTABLE(cp9_ex15_median_fn "ch09_functions/exercises/ex15_median_fn.c")
 ADD_EXECUTABLE(cp9_ex17_fn_fact "ch09_functions/exercises/ex17_fn_fact_non_recursive.c")
 ADD_EXECUTABLE(cp9_ex18_gcd_recursive "ch09_functions/exercises/ex18_gcd_recursive.c")
 ADD_EXECUTABLE(cp9_ex19_mystery_fn "ch09_functions/exercises/ex19_mystery_fn.c")
+#projects
+add_executable(cp9_pr01_selection_sort "ch09_functions/projects/cp9_pr01_selection_sort.c")
