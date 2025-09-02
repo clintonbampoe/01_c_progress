@@ -22,6 +22,9 @@ Makefile
 *.user
 *.sdf
 
+# IDE noise (CLion)
+*.idea/
+
 # 📦 Package and dependency folders
 out/
 bin/
