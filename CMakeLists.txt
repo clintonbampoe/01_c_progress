@@ -114,3 +114,5 @@ ADD_EXECUTABLE(cp9_ex18_gcd_recursive "ch09_functions/exercises/ex18_gcd_recursi
 ADD_EXECUTABLE(cp9_ex19_mystery_fn "ch09_functions/exercises/ex19_mystery_fn.c")
 #projects
 add_executable(cp9_pr01_selection_sort "ch09_functions/projects/cp9_pr01_selection_sort.c")
+add_executable(cp9_pr02_income_tax_fn "ch09_functions/projects/cp9_pr02_income_tax_fn.c")
+add_executable(cp9_pr03_a_random_walk "ch09_functions/projects/cp9_pr03_a_random_walk.c")

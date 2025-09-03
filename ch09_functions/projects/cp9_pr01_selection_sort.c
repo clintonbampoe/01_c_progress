@@ -14,7 +14,7 @@ int main(void) {
 	int array[SIZE] = { 5, 6, 0, 1, 4, 2, 3 };
 
 	selection_sort(array, SIZE);
-	
+
 	// output
 	for (int i = 0; i < SIZE; i++) {
 		printf("%d ", array[i]);

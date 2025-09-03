@@ -1,4 +1,4 @@
-# 🧱 Build artifacts
+# Build artifacts
 *.obj
 *.exe
 *.dll
@@ -8,13 +8,13 @@
 *.log
 *.tmp
 
-# 🛠️ CMake output
+# CMake output
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
 
-# 🧠 IDE noise (Visual Studio)
+# IDE noise (Visual Studio)
 .vs/
 *.VC.db
 *.VC.opendb
@@ -25,13 +25,13 @@ Makefile
 # IDE noise (CLion)
 *.idea/
 
-# 📦 Package and dependency folders
+# Package and dependency folders
 out/
 bin/
 build/
 Debug/
 Release/
 
-# 🧼 OS-specific clutter
+# OS-specific clutter
 Thumbs.db
 .DS_Store
