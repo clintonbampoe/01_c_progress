@@ -117,3 +117,5 @@ add_executable(cp9_pr01_selection_sort "ch09_functions/projects/cp9_pr01_selecti
 add_executable(cp9_pr02_income_tax_fn "ch09_functions/projects/cp9_pr02_income_tax_fn.c")
 add_executable(cp9_pr03_a_random_walk "ch09_functions/projects/cp9_pr03_a_random_walk.c")
 add_executable(cp9_pr04_anagram "ch09_functions/projects/cp9_pr04_anagram.c")
+add_executable(cp9_pr05_magic_square "ch09_functions/projects/cp9_pr05_magic_square.c")
+add_executable(cp9_pr06_polynomial "ch09_functions/projects/cp9_pr06_polynomial.c")
