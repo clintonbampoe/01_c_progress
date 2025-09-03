@@ -119,3 +119,4 @@ add_executable(cp9_pr03_a_random_walk "ch09_functions/projects/cp9_pr03_a_random
 add_executable(cp9_pr04_anagram "ch09_functions/projects/cp9_pr04_anagram.c")
 add_executable(cp9_pr05_magic_square "ch09_functions/projects/cp9_pr05_magic_square.c")
 add_executable(cp9_pr06_polynomial "ch09_functions/projects/cp9_pr06_polynomial.c")
+add_executable(cp9_pr07_power "ch09_functions/projects/cp9_pr07_power.c")
