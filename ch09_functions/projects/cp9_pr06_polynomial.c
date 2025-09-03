@@ -26,7 +26,7 @@ int main(void) {
 
 // fn01 power function (recursive)
 int exp(int x, int power) {
-	if (power == 1) {
+	if (power == 0) {
 		return 1;
 	}
 	else {
