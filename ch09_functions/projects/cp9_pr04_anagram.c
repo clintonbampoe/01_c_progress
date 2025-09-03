@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
+#include <math.h>
 
 
 // macro def
@@ -8,51 +9,64 @@
 #define NOT_ANAGRAM 100
 
 
+// fn declaration
+void read_word(int[]);
+bool equal_array(int [ALPHABET], int [ALPHABET]);
+
+
+
 // fn00 main
 int main(void) {
 
-	// init array
-	int ch_seen[ALPHABET];
-	for (int i = 0; i < ALPHABET; i++) {
-		ch_seen[i] = 0;
-	}
+	// var init
+	int counts1[ALPHABET] = { 0 };
+	int counts2[ALPHABET] = { 0 };
 
-	// first word input
-	char ch;
-	printf("Enter first word: ");
-	while ((ch = tolower(getchar())) != '\n' && ch != EOF) {
-		ch_seen[ch - 'a']++;
-	}
-
-	
-	// second word input
-	printf("Enter second word: ");
-	while ((ch = tolower(getchar())) != '\n' && ch != EOF) {
-		ch_seen[ch - 'a']--;
-	}
+	// read first word
+	read_word(counts1);
+	// read second word
+	read_word(counts2);
 
 
-	// check for anagram
-	// is_anagram if all ch_seen elements are zero
-	bool is_anagram;
-	for (int i = 0; i < ALPHABET; i++) {
-		if (ch_seen[i] == 0) {
-			is_anagram = true;
-		}
-		else {
-			is_anagram = false;
-			printf("The words are not anagrams.\n");
-			return NOT_ANAGRAM;
-		}
-	}
-
+	// check if both words are anagrams
+	bool is_equal = equal_array(counts1, counts2);
 
 	// output
-	if (is_anagram) {
-		printf("The words are anagrams.\n");
+	if (is_equal) {
+		printf("The words are anagrams");
+	}
+	else {
+		printf("The words are not anagrams");
+	}
+}
+
+
+// fn01 read word
+void read_word(int counts[]) {
+	// init array
+	for (int i = 0; i < ALPHABET; i++) {
+		counts[i] = 0;
 	}
 
+	// word input
+	char ch;
+	printf("Enter first word: ");
+	while ((ch = toupper(getchar())) != '\n' && ch != EOF) {
+		counts[ch - 'A']++;
+	}
+}
 
-	// end
-	return 0;
+
+// fn02 equal array (checks for anagram)
+bool equal_array(int counts1[ALPHABET], int counts2[ALPHABET]) {
+	bool is_equal = false;
+	for (int i = 0; i < ALPHABET; i++) {
+		if (counts1[i] == counts2[i]) {
+			is_equal = true;
+		}
+		else {
+			return false;
+		}
+	}
+	return true;
 }
