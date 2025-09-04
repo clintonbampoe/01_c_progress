@@ -15,13 +15,13 @@ Chapters are marked as completed when core concepts are implemented (in exercise
 6. Loops  
 7. Basic Types  
 8. Arrays  
-
+9. Functions
 
 
 ## `Current Chapter`
-9. Functions  
+10. Program Organization  
 
 
 
 ## `Upcoming`
-10. Program Organization
+11. Pointers
