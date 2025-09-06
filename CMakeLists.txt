@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.31.6)
-project(02_c_mastery C)
+cmake_minimum_required(VERSION 3.15)
+project(02_c_mastery LANGUAGES C)
 
 set(CMAKE_C_STANDARD 11)
 
@@ -43,6 +43,7 @@ add_executable(cp4_12_time_convert "ch04_expressions/12_time_convert.c")
 add_executable(cp4_13_upc "ch04_expressions/13_upc.c")
 add_executable(cp4_14_wind_speed "ch04_expressions/14_wind_speed.c")
 
+
 # ch06_loops
 add_executable(cp6_01_checking "ch06_loops/01_checking.c")
 add_executable(cp6_02_date_sort_testing "ch06_loops/02_date_sort_testing_clion.c")
@@ -52,6 +53,7 @@ add_executable(cp6_05_square "ch06_loops/05_square.c")
 add_executable(cp6_06_square1 "ch06_loops/06_square1.c")
 add_executable(cp6_07_square3 "ch06_loops/07_square3.c")
 add_executable(cp6_08_sum "ch06_loops/08_sum.c")
+
 
 # ch07_basic_types
 add_executable(cp7_01_alpha_to_num "ch07_basic_types/01_alpha_to_num.c")
@@ -70,6 +72,7 @@ add_executable(cp7_13_sum2 "ch07_basic_types/14_sum2.c")
 add_executable(cp7_14_time_format_convert "ch07_basic_types/15_time_format_convert.c")
 add_executable(cp7_15_vowel_count "ch07_basic_types/16_vowel_count.c")
 add_executable(cp7_16_name "ch07_basic_types/07_name.c")
+
 
 # ch08_arrays
 add_executable(cp8_01_arrays "ch08_arrays/01_arrays.c")
@@ -91,6 +94,7 @@ add_executable(cp8_16_rep_digit_3 "ch08_arrays/16_repeated_digit_3.c")
 add_executable(cp8_17_reverse "ch08_arrays/17_reverse.c")
 add_executable(cp8_18_reverse_numbers "ch08_arrays/18_reverse_numbers.c")
 add_executable(cp8_19_temp "ch08_arrays/19_temp.c")
+
 
 # ch09_functions
 add_executable(cp9_01_main "ch09_functions/01_main.c")
@@ -121,3 +125,9 @@ add_executable(cp9_pr05_magic_square "ch09_functions/projects/cp9_pr05_magic_squ
 add_executable(cp9_pr06_polynomial "ch09_functions/projects/cp9_pr06_polynomial.c")
 add_executable(cp9_pr07_power "ch09_functions/projects/cp9_pr07_power.c")
 add_executable(cp9_pr08_craps "ch09_functions/projects/cp9_pr08_craps.c")
+
+
+# ch10_program_organization
+add_executable(cp10_00_temp "ch10_program_org/cp10_00_temp.c")
+add_executable(cp10_01_guess "ch10_program_org/cp10_01_guess.c")
+add_executable(cp10_02_poker "ch10_program_org/cp10_02_poker.c")

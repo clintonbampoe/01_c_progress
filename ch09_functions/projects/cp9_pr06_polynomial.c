@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // fn declaration
-int exp(int, int);
+int exponent(int, int);
 int eval(int);
 
 
@@ -25,17 +25,17 @@ int main(void) {
 
 
 // fn01 power function (recursive)
-int exp(int x, int power) {
+int exponent(int x, int power) {
 	if (power == 0) {
 		return 1;
 	}
 	else {
-		return x* exp(x, power - 1);
+		return x* exponent(x, power - 1);
 	}
 }
 
 
 // fn02 polynomial evaluation function
 int eval(int x) {
-	return (3 * exp(x, 5)) + (2 * exp(x, 4)) - (5 * exp(x, 3)) - (1 * exp(x, 2)) + (7 * exp(x, 1)) - 6;
+	return (3 * exponent(x, 5)) + (2 * exponent(x, 4)) - (5 * exponent(x, 3)) - (1 * exponent(x, 2)) + (7 * exponent(x, 1)) - 6;
 }

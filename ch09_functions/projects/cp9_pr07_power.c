@@ -2,7 +2,7 @@
 
 
 // fn declaration
-int exp(int x, int power);
+int exponent(int x, int power);
 
 
 // fn00 main
@@ -21,17 +21,17 @@ int main(void) {
 
 
 // fn01 power function (recursive)
-int exp(int x, int n) {
+int exponent(int x, int n) {
 	if (n == 0) {
 		return 1;
 	}
 	else {
 		if (n % 2 == 0) {
-			int half = exp(x, n/2);
+			int half = exponent(x, n/2);
 			return half * half;
 		}
 		else {
-			return x * exp(x, n - 1);
+			return x * exponent(x, n - 1);
 		}
 	}
 }

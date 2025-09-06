@@ -34,7 +34,7 @@ void swap(int* x, int* y) {
 }
 
 // fn02 selection sort
-static void selection_sort(int arr[], int size) {
+void selection_sort(int arr[], int size) {
 	if (size <= 1) {
 		return;
 	}
