@@ -2,6 +2,7 @@
   "version": 3,
   "configurePresets": [
     {
+      // generic linux debug
       "name": "linux-debug",
       "displayName": "Linux Debug",
       "description": "Target the Windows Subsystem for Linux (WSL) or a remote system.",
@@ -17,6 +18,7 @@
       "vendor": { "microsoft.com/VisualStudioRemoteSettings/CMake/2.0": { "remoteSourceRootDir": "$env{HOME}/.vs/$ms{projectDirName}" } }
     },
     {
+      // gcc linux debug
       "name": "wsl-gcc-debug",
       "displayName": "WSL GCC Debug",
       "generator": "Ninja",
@@ -37,6 +39,7 @@
       }
     },
     {
+      // clang linux debug
       "name": "wsl-clang-debug",
       "displayName": "WSL Clang Debug",
       "generator": "Ninja",
@@ -57,6 +60,7 @@
       }
     },
     {
+      // macos debug
       "name": "macos-debug",
       "displayName": "macOS Debug",
       "description": "Target a remote macOS system.",
@@ -71,6 +75,9 @@
       },
       "vendor": { "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": { "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}" } }
     },
+    
+
+    // WINDOWS DEBUG SECTION
     {
       "name": "windows-base",
       "description": "Target Windows with the Visual Studio development environment.",

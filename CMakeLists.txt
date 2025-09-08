@@ -131,3 +131,5 @@ add_executable(cp9_pr08_craps "ch09_functions/projects/cp9_pr08_craps.c")
 add_executable(cp10_00_temp "ch10_program_org/cp10_00_temp.c")
 add_executable(cp10_01_guess "ch10_program_org/cp10_01_guess.c")
 add_executable(cp10_02_poker "ch10_program_org/cp10_02_poker.c")
+#projects
+add_executable(cp10_pr01_braces "ch10_program_org/projects/cp10_pr01_braces.c")
