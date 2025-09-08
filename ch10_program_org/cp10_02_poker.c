@@ -10,15 +10,13 @@
 
 
 // external variables
-int num_in_rank[NUM_RANKS];
-int num_in_suit[NUM_SUITS];
 bool straight, flush, four, three;
 int pairs;		// can be 0, 1 or 2
 
 
 // function declaration
-void read_card(void);
-void analyze_hand(void);
+void read_card(int [], int []);
+void analyze_hand(int [], int []);
 void print_result(void);
 
 
@@ -27,10 +25,14 @@ void print_result(void);
 * main function calls read_card, analyze_hand and print_result repeatedly
 */
 int main(void) {
+	// var init 
+	int num_in_rank[NUM_RANKS];
+	int num_in_suit[NUM_SUITS];
+
 
 	while (true) {
-		read_card();
-		analyze_hand();
+		read_card(num_in_rank, num_in_suit);
+		analyze_hand(num_in_rank, num_in_suit);
 		print_result();
 
 	}
@@ -42,7 +44,7 @@ int main(void) {
 /*
 	reads cards into external variables, and checks duplicate cards and bad cards.
 */
-void read_card(void) {
+void read_card(int num_in_rank[],int num_in_suit[]) {
 
 	// var init
 	bool card_exists[NUM_RANKS][NUM_SUITS];
@@ -160,7 +162,7 @@ void read_card(void) {
 	Determines whether the hand contains a straight, a flush, four-of-a-kind, and/or three-of-a-kind;
 	determines the number of pairs; stored the results into external variables.
 */
-void analyze_hand(void) {
+void analyze_hand(int num_in_rank[], int num_in_suit[]) {
 	// var init
 	int num_consec = 0;
 	int rank, suit;
