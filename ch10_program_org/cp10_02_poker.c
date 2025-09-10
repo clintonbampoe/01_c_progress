@@ -12,7 +12,7 @@
 #define SUIT 1
 
 // external variables
-bool royal, straight, flush, four, three;
+bool ace_low, royal, straight, flush, four, three;
 int pairs;		// can be 0, 1 or 2
 
 
@@ -197,6 +197,17 @@ void analyze_hand(int hand[NUM_CARDS][2]) {
 		}
 	}
 
+
+	// check for ace-low straights
+	/*
+		if hand has ace, two, three, four, five
+	*/
+	ace_low = false;
+	if (rank_seen[13] && rank_seen[1] && rank_seen[2] && rank_seen[3] && rank_seen[4]) {
+		ace_low = true;
+	}
+
+
 	// check for straight
 	int num_consec = 1;
 	straight = false;
@@ -214,6 +225,7 @@ void analyze_hand(int hand[NUM_CARDS][2]) {
 	if (num_consec == NUM_CARDS) {
 		straight = true;
 	}
+
 
 	// check for 4-of-a-kind, 3-of-a-kind and pairs
 	pairs = 0;
@@ -257,6 +269,9 @@ void print_result(void) {
 	}
 	else if (straight && flush) {
 		printf("Straight flush");
+	}
+	if (ace_low) {
+		printf("Ace low");
 	}
 	else if (four) {
 		printf("Four-of-a-kind");
