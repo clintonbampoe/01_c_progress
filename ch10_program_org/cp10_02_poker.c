@@ -12,7 +12,7 @@
 #define SUIT 1
 
 // external variables
-bool straight, flush, four, three;
+bool royal, straight, flush, four, three;
 int pairs;		// can be 0, 1 or 2
 
 
@@ -160,17 +160,12 @@ void read_card(int hand[NUM_CARDS][2]) {
 	determines the number of pairs; stored the results into external variables.
 */
 void analyze_hand(int hand[NUM_CARDS][2]) {
-	// var init
-	straight = false;
-	flush = false;
-	four = false;
-	three = false;
-	pairs = false;
 
 	// check for flush
 	int same_suit = 1;
 	int suit_seen[NUM_SUITS] = { 0 };
-
+	int rank_seen[NUM_RANKS] = { 0 };
+	flush = false;
 	for (int i = 0; i < NUM_SUITS; i++) {
 		suit_seen[i] = 0;
 	}
@@ -179,6 +174,10 @@ void analyze_hand(int hand[NUM_CARDS][2]) {
 		
 		int suit = hand[card][SUIT];
 		suit_seen[suit]++;
+
+		int rank = hand[card][RANK];
+		// account for zero-indexing of arrays
+		rank_seen[rank - 1]++;
 	}
 	for (int i = 0; i < NUM_SUITS; i++) {
 		if (suit_seen[i] == 5) {
@@ -186,9 +185,21 @@ void analyze_hand(int hand[NUM_CARDS][2]) {
 		}
 	}
 
+	// check for royal flush
+	/*
+		if statement checks if the array elements corresponding to ace, king, queen, jack and 10 have been filled.
+		when statement is true, we have a royal flush
+	*/
+	royal = false;
+	if (flush) {
+		if (rank_seen[13] && rank_seen[12] && rank_seen[11] && rank_seen[10] && rank_seen[9]) {
+			royal = true;
+		}
+	}
 
 	// check for straight
 	int num_consec = 1;
+	straight = false;
 	/*
 		started iteration from 1 since [card - 1] for 0 would result in array going out of bounds.
 	*/
@@ -205,8 +216,11 @@ void analyze_hand(int hand[NUM_CARDS][2]) {
 	}
 
 	// check for 4-of-a-kind, 3-of-a-kind and pairs
-	int rank_seen[NUM_RANKS] = { 0 };
 	pairs = 0;
+	four = false;
+	three = false;
+
+	// flush all rank_seen elements to zero
 	for (int i = 0; i < NUM_RANKS; i++) {
 		rank_seen[i] = 0;
 	}
@@ -214,7 +228,8 @@ void analyze_hand(int hand[NUM_CARDS][2]) {
 	for (int card = 0; card < NUM_CARDS; card++) {
 		
 		int rank = hand[card][RANK];
-		rank_seen[rank]++;
+		// account for zero-indexing of arrays
+		rank_seen[rank - 1]++;
 
 	}
 	
@@ -237,7 +252,10 @@ void analyze_hand(int hand[NUM_CARDS][2]) {
 	Notifies the user of the result by using external variables set analyze hand.
 */
 void print_result(void) {
-	if (straight && flush) {
+	if (royal) {
+		printf("Royal flush");
+	}
+	else if (straight && flush) {
 		printf("Straight flush");
 	}
 	else if (four) {
