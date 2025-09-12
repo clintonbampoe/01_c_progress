@@ -134,3 +134,4 @@ add_executable(cp10_02_poker "ch10_program_org/cp10_02_poker.c")
 #projects
 add_executable(cp10_pr01_braces "ch10_program_org/projects/cp10_pr01_braces.c")
 add_executable(cp10_pr06_rpn "ch10_program_org/projects/cp10_pr06_rpn.c")
+add_executable(cp10_pr07_7sdd "ch10_program_org/projects/cp10_pr07_7sdd.c")

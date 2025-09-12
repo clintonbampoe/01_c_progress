@@ -1,63 +1,23 @@
-// TEMP HOLDING FOR FRAGMENTS OF STACK PROGRAM
-
 #include <stdio.h>
-#include <stdbool.h>
 
-#define STACK_SIZE 5
-
-
-// external variables
-int contents[STACK_SIZE];
-int top;
-bool stack_overflow;
-bool stack_underflow;
-int i;
-
-// fn declaration
-void make_empty(void);
-bool is_full(void);
-bool is_empty(void);
-void push(void);
-int pop(void);
-
-
-// fn00 main
 int main(void) {
+	char digit[4][4];
 
-}
-
-
-// fn01
-void make_empty(void) {
-	top = 0;
-}
-
-// fn02
-bool is_full(void) {
-	return top == STACK_SIZE;
-}
-
-// fn03 
-bool is_empty(void) {
-	return top == 0;
-}
-
-// fn04
-void push(void) {
-	if (is_full()) {
-		stack_overflow = true;
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			digit[i][j] = ' ';
+		}
 	}
-	else {
-		contents[top++] = i;
-	}
-}
+	
+	digit[0][0] = ' ', digit[0][2] = ' '; digit[2][0] = ' ';
+	digit[0][1] = '__', digit[1][1] = '_', digit[2][1] = '_';
+	digit[1][0] = '|', digit[1][2] = '|', digit[2][2] = '|';
 
-// fn05
-int pop(void) {
-	if (is_empty()) {
-		stack_underflow = true;
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			printf("%c", digit[i][j]);
+		}
+		printf("\n");
 	}
-	else {
-		return contents[--top];
-	}
+	return 0;
 }
